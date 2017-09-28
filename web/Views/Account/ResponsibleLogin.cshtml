@@ -1,0 +1,80 @@
+﻿@using PoliclinicoWeb.ViewModels
+@model LoginViewModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>RespomsibleLogin</title>
+    <link href="~/Content/estilologin.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="main-agileinfo slider ">
+        <div class="items-group">
+            <div class="item agileits-w3layouts">
+                <div class="block text main-agileits">
+                    <span class="circleLight"></span>
+                    <!-- login form -->
+                    <div class="login-form loginw3-agile">
+                        <div class="agile-row">
+
+                            <h1> Policlinico Divino Niño</h1>
+                            <div class="login-agileits-top">
+                                <form action="#" method="post">
+                                    <section id="loginForm">
+                                        @using (Html.BeginForm("ResponsibleLogin", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+            {
+                                            @Html.AntiForgeryToken()
+                                         
+                                                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                                                <div class="form-group">
+                                                    @Html.LabelFor(m => m.UserName, new { @class = "col-md-2 control-label" })
+                                                    <div class="col-md-10">
+                                                        @Html.TextBoxFor(m => m.UserName, new { @class = "form-control" })
+                                                        @Html.ValidationMessageFor(m => m.UserName, "", new { @class = "text-danger" })
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    @Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })
+                                                    <div class="col-md-10">
+                                                        @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+                                                        @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="col-md-offset-2 col-md-10">
+                                                        <div class="checkbox">
+                                                            @Html.CheckBoxFor(m => m.RememberMe)
+                                                            @Html.LabelFor(m => m.RememberMe)
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="col-md-offset-2 col-md-10">
+                                                        <input type="submit" value="Log in" class="btn btn-default" />
+                                                    </div>
+                                                </div>
+                                                <p>
+                                                    @Html.ActionLink("Olvido su password?", "ForgotPassword")
+                                                </p>
+                                        }
+                                    </section>
+
+
+
+                                </form>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

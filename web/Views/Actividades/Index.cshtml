@@ -1,0 +1,72 @@
+﻿@model IEnumerable<Actividad>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<p>
+    <a class="btn btn-default" data-target="#modal-crear" data-toggle="modal"
+       href="/Actividades/Create">Crear nueva</a>
+</p>
+
+<div id="calendar">
+</div>
+
+<div class="modal fade" id="modal-crear" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modal-editar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+</div>
+
+        @section Scripts {
+            <script src="@Url.Content("~/Scripts/moment.min.js")"></script>
+            <script src="@Url.Content("~/Scripts/fullcalendar.js")"></script>
+            <script src="@Url.Content("~/Scripts/lang/es.js")"></script>
+
+            <script>
+                function closeModalCreate(data) {
+                    if (data.success) {
+                        $('#modal-crear').modal('hide');
+                        window.location.href = "/actividades/index";
+                    }
+                }
+
+                function closeModalEdit(data) {
+                    if (data.success) {
+                        $('#modal-editar').modal('hide');
+                        window.location.href = "/actividades/index";
+                    }
+                }
+                
+                $(document).ready(function () {
+                    $("#calendar").fullCalendar({
+                        lang: 'es',
+                        events: '/Actividades/Eventos',
+                        eventClick: function (event, element) {
+                            var serviceUrl = '/Actividades/Edit/' + event.id;
+                            $.ajax({
+                                type: "GET",
+                                url: serviceUrl,
+                                data: $(this).serialize(),
+                                success: successFunc
+                            });
+                        }
+                    });
+
+                    function successFunc(data, status) {
+                        $('#modal-editar').html(data);
+                        $('.datepicker').datepicker({
+                            format: 'dd/mm/yyyy',
+                            autoclose: true,
+                            language: 'es'
+                        });
+                        $('#modal-editar').modal('show');
+                    }
+                });
+            </script>
+        }

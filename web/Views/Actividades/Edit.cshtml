@@ -1,0 +1,118 @@
+﻿@model CRMFacilitoInicial.Models.ActividadViewModel
+
+@{
+    ViewBag.Title = "Editar";
+}
+<div class="modal-dialog" role="document">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            <h4 class="modal-title" id="myModalLabel">@ViewBag.Title</h4>
+        </div>
+        <div class="modal-body">
+
+            @using (Ajax.BeginForm("Edit", "Actividades", null,
+        new AjaxOptions
+        {
+            HttpMethod = "POST",
+            Url = Url.Action("Edit", "Actividades"),
+            UpdateTargetId = "modal-content",
+            OnSuccess = "closeModalEdit",
+            InsertionMode = InsertionMode.Replace
+        },
+        new { @class = "form-horizontal", role = "form", id = "frmEditar" }
+        ))
+            {
+                @Html.AntiForgeryToken()
+
+                <div class="form-horizontal">
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    @Html.HiddenFor(model => model.ActividadId)
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Descripcion, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.Descripcion, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Descripcion, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.FechaInicial, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.TextBoxFor(model => model.FechaInicial, "{0:dd/MM/yyyy}", new { @class = "form-control datepicker" })
+                            @Html.ValidationMessageFor(model => model.FechaInicial, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.TipoActividadId, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.DropDownListFor(model => model.TipoActividadId, ViewData["tipos"] as SelectList,
+                "--SELECCIONE EL TIPO DE ACTIVIDAD", new { @class = "form-control" })
+                            <span class="error">Se requiere el tipo de actividad</span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-2">Id del cliente:</label>
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.ClienteId, new { htmlAttributes = new { @class = "form-control", id = "ClienteId" } })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-2">Nombre del cliente:</label>
+                        <div class="col-md-10">
+                            @Html.TextBox("nombre", null, new { @class = "form-control" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-2">Telefonos:</label>
+                        <div class="col-md-10">
+                            <label>@Model.Telefonos</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-2">Emails:</label>
+                        <div class="col-md-10">
+                            <label>@Model.Emails</label>
+                        </div>
+                    </div>
+
+                    @if(User.IsInRole("AdminAgenda") || User.IsInRole("Admin"))
+                    { 
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-10">
+                            <input type="submit" value="Guardar" class="btn btn-default" />
+                        </div>
+                    </div>
+                    }
+                </div>
+            }
+
+            @if(User.IsInRole("AdminAgenda") || User.IsInRole("Admin"))
+            {
+                <div>
+                    @Html.ActionLink("Eliminar", "Delete", new { id = @Model.ActividadId }, new { @class = "btn btn-default" })
+                </div>
+            }
+            </div>
+    </div>
+</div>
+    <script>
+        $('#nombre')
+                    .autocomplete({
+                        source: '@Url.Action("Lista", "Clientes")',
+                        select: function (event, ui) {
+                            //alert('you have selected ' + ui.item.value + ' ID: ' + ui.item.id);
+                            $('#ClienteId').val(ui.item.id);
+                            $('#nombre').val(ui.item.value);
+                            return false;
+                        }
+                    });
+    </script>

@@ -1,0 +1,48 @@
+﻿@model ApplicationUser
+@{
+    List<ApplicationRole> roles = ViewBag.Roles;
+    ViewBag.Title = "Crud";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<div class="form-group">
+    <label>Usuario</label>
+    <input class="form-control" type="text" readonly value="@Model.UserName" />
+</div>
+
+<hr />
+
+@using (Html.BeginForm("AddRole", "Users", FormMethod.Post))
+{
+    <div class="form-group">
+        <input type="hidden" name="UserId" value="@Model.Id" />
+        <select class="form-control" name="RoleId">
+
+            @foreach (var r in roles)
+            {
+                <option value="@r.Id">@r.Name</option>
+            }
+        </select>
+        <div class="form-group">
+            @Html.Label("Roles", new { @class = "control-label col-md-2" })
+            <span class=" col-md-10">
+                @foreach (var item in roles)
+                {
+
+               
+                    @Html.Label(item.Name, new { @class = "control-label" })
+                }
+            </span>
+        </div>
+
+
+
+
+
+    </div>
+    <button type="submit" class="btn btn-default">Add</button>
+}
+
+
+}

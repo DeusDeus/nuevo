@@ -1,0 +1,40 @@
+C:\Users\Deus\Desktop\asp.net-mvc-5-arquitectura-base-master - copia\04-Common\Common\bin\Debug\Common.dll
+C:\Users\Deus\Desktop\asp.net-mvc-5-arquitectura-base-master - copia\04-Common\Common\bin\Debug\Common.pdb
+C:\Users\Deus\Desktop\asp.net-mvc-5-arquitectura-base-master - copia\04-Common\Common\bin\Debug\LightInject.dll
+C:\Users\Deus\Desktop\asp.net-mvc-5-arquitectura-base-master - copia\04-Common\Common\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Deus\Desktop\asp.net-mvc-5-arquitectura-base-master - copia\04-Common\Common\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Deus\Desktop\asp.net-mvc-5-arquitectura-base-master - copia\04-Common\Common\bin\Debug\LightInject.pdb
+C:\Users\Deus\Desktop\asp.net-mvc-5-arquitectura-base-master - copia\04-Common\Common\bin\Debug\LightInject.xml
+C:\Users\Deus\Desktop\asp.net-mvc-5-arquitectura-base-master - copia\04-Common\Common\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Deus\Desktop\asp.net-mvc-5-arquitectura-base-master - copia\04-Common\Common\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Deus\Desktop\asp.net-mvc-5-arquitectura-base-master - copia\04-Common\Common\obj\Debug\Common.dll
+C:\Users\Deus\Desktop\asp.net-mvc-5-arquitectura-base-master - copia\04-Common\Common\obj\Debug\Common.pdb
+C:\Users\Deus\Desktop\asp.net-mvc-5-arquitectura-base-master - copia\04-Common\Common\bin\Debug\EntityFramework.dll
+C:\Users\Deus\Desktop\asp.net-mvc-5-arquitectura-base-master - copia\04-Common\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
+C:\Users\Deus\Desktop\asp.net-mvc-5-arquitectura-base-master - copia - copia\04-Common\Common\bin\Debug\Common.dll
+C:\Users\Deus\Desktop\asp.net-mvc-5-arquitectura-base-master - copia - copia\04-Common\Common\bin\Debug\Common.pdb
+C:\Users\Deus\Desktop\asp.net-mvc-5-arquitectura-base-master - copia - copia\04-Common\Common\bin\Debug\EntityFramework.dll
+C:\Users\Deus\Desktop\asp.net-mvc-5-arquitectura-base-master - copia - copia\04-Common\Common\bin\Debug\LightInject.dll
+C:\Users\Deus\Desktop\asp.net-mvc-5-arquitectura-base-master - copia - copia\04-Common\Common\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Deus\Desktop\asp.net-mvc-5-arquitectura-base-master - copia - copia\04-Common\Common\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Deus\Desktop\asp.net-mvc-5-arquitectura-base-master - copia - copia\04-Common\Common\bin\Debug\LightInject.pdb
+C:\Users\Deus\Desktop\asp.net-mvc-5-arquitectura-base-master - copia - copia\04-Common\Common\bin\Debug\LightInject.xml
+C:\Users\Deus\Desktop\asp.net-mvc-5-arquitectura-base-master - copia - copia\04-Common\Common\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Deus\Desktop\asp.net-mvc-5-arquitectura-base-master - copia - copia\04-Common\Common\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Deus\Desktop\asp.net-mvc-5-arquitectura-base-master - copia - copia\04-Common\Common\obj\Debug\Common.dll
+C:\Users\Deus\Desktop\asp.net-mvc-5-arquitectura-base-master - copia - copia\04-Common\Common\obj\Debug\Common.pdb
+C:\Users\Deus\Desktop\asp.net-mvc-5-arquitectura-base-master - copia - copia\04-Common\Common\bin\Debug\es\Microsoft.AspNet.Identity.Core.resources.dll
+C:\Users\Deus\Desktop\base\Modificado\04-Common\Common\bin\Debug\Common.dll
+C:\Users\Deus\Desktop\base\Modificado\04-Common\Common\bin\Debug\Common.pdb
+C:\Users\Deus\Desktop\base\Modificado\04-Common\Common\bin\Debug\EntityFramework.dll
+C:\Users\Deus\Desktop\base\Modificado\04-Common\Common\bin\Debug\LightInject.dll
+C:\Users\Deus\Desktop\base\Modificado\04-Common\Common\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Deus\Desktop\base\Modificado\04-Common\Common\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Deus\Desktop\base\Modificado\04-Common\Common\bin\Debug\LightInject.pdb
+C:\Users\Deus\Desktop\base\Modificado\04-Common\Common\bin\Debug\LightInject.xml
+C:\Users\Deus\Desktop\base\Modificado\04-Common\Common\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Deus\Desktop\base\Modificado\04-Common\Common\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Deus\Desktop\base\Modificado\04-Common\Common\bin\Debug\es\Microsoft.AspNet.Identity.Core.resources.dll
+C:\Users\Deus\Desktop\base\Modificado\04-Common\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
+C:\Users\Deus\Desktop\base\Modificado\04-Common\Common\obj\Debug\Common.dll
+C:\Users\Deus\Desktop\base\Modificado\04-Common\Common\obj\Debug\Common.pdb

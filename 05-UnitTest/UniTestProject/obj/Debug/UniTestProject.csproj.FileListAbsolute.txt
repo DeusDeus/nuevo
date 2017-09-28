@@ -1,0 +1,41 @@
+C:\Users\Deus\Desktop\asp.net-mvc-5-arquitectura-base-master - copia\05-UnitTest\UniTestProject\bin\Debug\UniTestProject.dll.config
+C:\Users\Deus\Desktop\asp.net-mvc-5-arquitectura-base-master - copia\05-UnitTest\UniTestProject\bin\Debug\UniTestProject.dll
+C:\Users\Deus\Desktop\asp.net-mvc-5-arquitectura-base-master - copia\05-UnitTest\UniTestProject\bin\Debug\UniTestProject.pdb
+C:\Users\Deus\Desktop\asp.net-mvc-5-arquitectura-base-master - copia\05-UnitTest\UniTestProject\bin\Debug\Common.dll
+C:\Users\Deus\Desktop\asp.net-mvc-5-arquitectura-base-master - copia\05-UnitTest\UniTestProject\bin\Debug\EntityFramework.dll
+C:\Users\Deus\Desktop\asp.net-mvc-5-arquitectura-base-master - copia\05-UnitTest\UniTestProject\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Deus\Desktop\asp.net-mvc-5-arquitectura-base-master - copia\05-UnitTest\UniTestProject\bin\Debug\LightInject.dll
+C:\Users\Deus\Desktop\asp.net-mvc-5-arquitectura-base-master - copia\05-UnitTest\UniTestProject\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Deus\Desktop\asp.net-mvc-5-arquitectura-base-master - copia\05-UnitTest\UniTestProject\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Deus\Desktop\asp.net-mvc-5-arquitectura-base-master - copia\05-UnitTest\UniTestProject\bin\Debug\Common.pdb
+C:\Users\Deus\Desktop\asp.net-mvc-5-arquitectura-base-master - copia\05-UnitTest\UniTestProject\bin\Debug\EntityFramework.xml
+C:\Users\Deus\Desktop\asp.net-mvc-5-arquitectura-base-master - copia\05-UnitTest\UniTestProject\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Deus\Desktop\asp.net-mvc-5-arquitectura-base-master - copia\05-UnitTest\UniTestProject\bin\Debug\LightInject.pdb
+C:\Users\Deus\Desktop\asp.net-mvc-5-arquitectura-base-master - copia\05-UnitTest\UniTestProject\bin\Debug\LightInject.xml
+C:\Users\Deus\Desktop\asp.net-mvc-5-arquitectura-base-master - copia\05-UnitTest\UniTestProject\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Deus\Desktop\asp.net-mvc-5-arquitectura-base-master - copia\05-UnitTest\UniTestProject\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Deus\Desktop\asp.net-mvc-5-arquitectura-base-master - copia\05-UnitTest\UniTestProject\obj\Debug\UniTestProject.csprojResolveAssemblyReference.cache
+C:\Users\Deus\Desktop\asp.net-mvc-5-arquitectura-base-master - copia\05-UnitTest\UniTestProject\obj\Debug\UniTestProject.dll
+C:\Users\Deus\Desktop\asp.net-mvc-5-arquitectura-base-master - copia\05-UnitTest\UniTestProject\obj\Debug\UniTestProject.pdb
+C:\Users\Deus\Desktop\asp.net-mvc-5-arquitectura-base-master - copia - copia\05-UnitTest\UniTestProject\bin\Debug\UniTestProject.dll.config
+C:\Users\Deus\Desktop\asp.net-mvc-5-arquitectura-base-master - copia - copia\05-UnitTest\UniTestProject\bin\Debug\UniTestProject.dll
+C:\Users\Deus\Desktop\asp.net-mvc-5-arquitectura-base-master - copia - copia\05-UnitTest\UniTestProject\bin\Debug\UniTestProject.pdb
+C:\Users\Deus\Desktop\asp.net-mvc-5-arquitectura-base-master - copia - copia\05-UnitTest\UniTestProject\bin\Debug\Common.dll
+C:\Users\Deus\Desktop\asp.net-mvc-5-arquitectura-base-master - copia - copia\05-UnitTest\UniTestProject\bin\Debug\EntityFramework.dll
+C:\Users\Deus\Desktop\asp.net-mvc-5-arquitectura-base-master - copia - copia\05-UnitTest\UniTestProject\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Deus\Desktop\asp.net-mvc-5-arquitectura-base-master - copia - copia\05-UnitTest\UniTestProject\bin\Debug\LightInject.dll
+C:\Users\Deus\Desktop\asp.net-mvc-5-arquitectura-base-master - copia - copia\05-UnitTest\UniTestProject\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Deus\Desktop\asp.net-mvc-5-arquitectura-base-master - copia - copia\05-UnitTest\UniTestProject\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Deus\Desktop\asp.net-mvc-5-arquitectura-base-master - copia - copia\05-UnitTest\UniTestProject\bin\Debug\Common.pdb
+C:\Users\Deus\Desktop\asp.net-mvc-5-arquitectura-base-master - copia - copia\05-UnitTest\UniTestProject\bin\Debug\EntityFramework.xml
+C:\Users\Deus\Desktop\asp.net-mvc-5-arquitectura-base-master - copia - copia\05-UnitTest\UniTestProject\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Deus\Desktop\asp.net-mvc-5-arquitectura-base-master - copia - copia\05-UnitTest\UniTestProject\bin\Debug\LightInject.pdb
+C:\Users\Deus\Desktop\asp.net-mvc-5-arquitectura-base-master - copia - copia\05-UnitTest\UniTestProject\bin\Debug\LightInject.xml
+C:\Users\Deus\Desktop\asp.net-mvc-5-arquitectura-base-master - copia - copia\05-UnitTest\UniTestProject\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Deus\Desktop\asp.net-mvc-5-arquitectura-base-master - copia - copia\05-UnitTest\UniTestProject\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Deus\Desktop\asp.net-mvc-5-arquitectura-base-master - copia - copia\05-UnitTest\UniTestProject\bin\Debug\es\EntityFramework.resources.dll
+C:\Users\Deus\Desktop\asp.net-mvc-5-arquitectura-base-master - copia - copia\05-UnitTest\UniTestProject\bin\Debug\es\EntityFramework.SqlServer.resources.dll
+C:\Users\Deus\Desktop\asp.net-mvc-5-arquitectura-base-master - copia - copia\05-UnitTest\UniTestProject\bin\Debug\es\Microsoft.AspNet.Identity.Core.resources.dll
+C:\Users\Deus\Desktop\asp.net-mvc-5-arquitectura-base-master - copia - copia\05-UnitTest\UniTestProject\obj\Debug\UniTestProject.csprojResolveAssemblyReference.cache
+C:\Users\Deus\Desktop\asp.net-mvc-5-arquitectura-base-master - copia - copia\05-UnitTest\UniTestProject\obj\Debug\UniTestProject.dll
+C:\Users\Deus\Desktop\asp.net-mvc-5-arquitectura-base-master - copia - copia\05-UnitTest\UniTestProject\obj\Debug\UniTestProject.pdb

@@ -1,0 +1,860 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.2\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.2\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BB0D2AD4-4DEC-4A20-A886-361CF3CDF591}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FrontEnd</RootNamespace>
+    <AssemblyName>FrontEnd</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.4.1.9004, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LightInject, Version=4.1.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\LightInject.4.1.5\lib\net45\LightInject.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.2\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\packages\NLog.4.3.11\lib\net45\NLog.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease, Version=1.5.2.14234, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.1\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.3.0.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>..\packages\Microsoft.Owin.Security.3.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Facebook">
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.3.0.1\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.3.0.1\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.3.0.1\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google">
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.3.0.1\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter">
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.3.0.1\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount">
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.3.0.1\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\EnumConfig.cs" />
+    <Compile Include="App_Start\ParamaterConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\IdentityConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ActividadesController.cs" />
+    <Compile Include="Controllers\CampaniasController.cs" />
+    <Compile Include="Controllers\EmpresaController.cs" />
+    <Compile Include="Controllers\ExampleController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\RolesController.cs" />
+    <Compile Include="Controllers\UserAdminController.cs" />
+    <Compile Include="Controllers\UsersController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Startup.cs" />
+    <Compile Include="ViewModels\AccountViewModels.cs" />
+    <Compile Include="ViewModels\AdminViewModel.cs" />
+    <Compile Include="ViewModels\ManageViewModels.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\bower_components\bootstrap\dist\css\bootstrap-theme.css" />
+    <Content Include="Assets\bower_components\bootstrap\dist\css\bootstrap-theme.min.css" />
+    <Content Include="Assets\bower_components\bootstrap\dist\css\bootstrap.css" />
+    <Content Include="Assets\bower_components\bootstrap\dist\css\bootstrap.min.css" />
+    <Content Include="Assets\bower_components\bootstrap\dist\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Assets\bower_components\bootstrap\dist\js\bootstrap.js" />
+    <Content Include="Assets\bower_components\bootstrap\dist\js\bootstrap.min.js" />
+    <Content Include="Assets\bower_components\bootstrap\dist\js\npm.js" />
+    <Content Include="Assets\bower_components\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Assets\bower_components\bootstrap\Gruntfile.js" />
+    <Content Include="Assets\bower_components\bootstrap\grunt\bs-commonjs-generator.js" />
+    <Content Include="Assets\bower_components\bootstrap\grunt\bs-glyphicons-data-generator.js" />
+    <Content Include="Assets\bower_components\bootstrap\grunt\bs-lessdoc-parser.js" />
+    <Content Include="Assets\bower_components\bootstrap\grunt\bs-raw-files-generator.js" />
+    <Content Include="Assets\bower_components\bootstrap\grunt\change-version.js" />
+    <Content Include="Assets\bower_components\bootstrap\js\affix.js" />
+    <Content Include="Assets\bower_components\bootstrap\js\alert.js" />
+    <Content Include="Assets\bower_components\bootstrap\js\button.js" />
+    <Content Include="Assets\bower_components\bootstrap\js\carousel.js" />
+    <Content Include="Assets\bower_components\bootstrap\js\collapse.js" />
+    <Content Include="Assets\bower_components\bootstrap\js\dropdown.js" />
+    <Content Include="Assets\bower_components\bootstrap\js\modal.js" />
+    <Content Include="Assets\bower_components\bootstrap\js\popover.js" />
+    <Content Include="Assets\bower_components\bootstrap\js\scrollspy.js" />
+    <Content Include="Assets\bower_components\bootstrap\js\tab.js" />
+    <Content Include="Assets\bower_components\bootstrap\js\tooltip.js" />
+    <Content Include="Assets\bower_components\bootstrap\js\transition.js" />
+    <Content Include="Assets\bower_components\bootstrap\package.js" />
+    <Content Include="Assets\bower_components\font-awesome\css\font-awesome.css" />
+    <Content Include="Assets\bower_components\font-awesome\css\font-awesome.min.css" />
+    <Content Include="Assets\bower_components\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="Assets\bower_components\font-awesome\HELP-US-OUT.txt" />
+    <Content Include="Assets\bower_components\jquery\AUTHORS.txt" />
+    <Content Include="Assets\bower_components\jquery\dist\core.js" />
+    <Content Include="Assets\bower_components\jquery\dist\jquery.js" />
+    <Content Include="Assets\bower_components\jquery\dist\jquery.min.js" />
+    <Content Include="Assets\bower_components\jquery\dist\jquery.slim.js" />
+    <Content Include="Assets\bower_components\jquery\dist\jquery.slim.min.js" />
+    <Content Include="Assets\bower_components\jquery\external\sizzle\dist\sizzle.js" />
+    <Content Include="Assets\bower_components\jquery\external\sizzle\dist\sizzle.min.js" />
+    <Content Include="Assets\bower_components\jquery\external\sizzle\LICENSE.txt" />
+    <Content Include="Assets\bower_components\jquery\LICENSE.txt" />
+    <Content Include="Assets\bower_components\jquery\src\ajax.js" />
+    <Content Include="Assets\bower_components\jquery\src\ajax\jsonp.js" />
+    <Content Include="Assets\bower_components\jquery\src\ajax\load.js" />
+    <Content Include="Assets\bower_components\jquery\src\ajax\parseXML.js" />
+    <Content Include="Assets\bower_components\jquery\src\ajax\script.js" />
+    <Content Include="Assets\bower_components\jquery\src\ajax\var\location.js" />
+    <Content Include="Assets\bower_components\jquery\src\ajax\var\nonce.js" />
+    <Content Include="Assets\bower_components\jquery\src\ajax\var\rquery.js" />
+    <Content Include="Assets\bower_components\jquery\src\ajax\xhr.js" />
+    <Content Include="Assets\bower_components\jquery\src\attributes.js" />
+    <Content Include="Assets\bower_components\jquery\src\attributes\attr.js" />
+    <Content Include="Assets\bower_components\jquery\src\attributes\classes.js" />
+    <Content Include="Assets\bower_components\jquery\src\attributes\prop.js" />
+    <Content Include="Assets\bower_components\jquery\src\attributes\support.js" />
+    <Content Include="Assets\bower_components\jquery\src\attributes\val.js" />
+    <Content Include="Assets\bower_components\jquery\src\callbacks.js" />
+    <Content Include="Assets\bower_components\jquery\src\core.js" />
+    <Content Include="Assets\bower_components\jquery\src\core\access.js" />
+    <Content Include="Assets\bower_components\jquery\src\core\DOMEval.js" />
+    <Content Include="Assets\bower_components\jquery\src\core\init.js" />
+    <Content Include="Assets\bower_components\jquery\src\core\parseHTML.js" />
+    <Content Include="Assets\bower_components\jquery\src\core\ready-no-deferred.js" />
+    <Content Include="Assets\bower_components\jquery\src\core\ready.js" />
+    <Content Include="Assets\bower_components\jquery\src\core\readyException.js" />
+    <Content Include="Assets\bower_components\jquery\src\core\stripAndCollapse.js" />
+    <Content Include="Assets\bower_components\jquery\src\core\support.js" />
+    <Content Include="Assets\bower_components\jquery\src\core\var\rsingleTag.js" />
+    <Content Include="Assets\bower_components\jquery\src\css.js" />
+    <Content Include="Assets\bower_components\jquery\src\css\addGetHookIf.js" />
+    <Content Include="Assets\bower_components\jquery\src\css\adjustCSS.js" />
+    <Content Include="Assets\bower_components\jquery\src\css\curCSS.js" />
+    <Content Include="Assets\bower_components\jquery\src\css\hiddenVisibleSelectors.js" />
+    <Content Include="Assets\bower_components\jquery\src\css\showHide.js" />
+    <Content Include="Assets\bower_components\jquery\src\css\support.js" />
+    <Content Include="Assets\bower_components\jquery\src\css\var\cssExpand.js" />
+    <Content Include="Assets\bower_components\jquery\src\css\var\getStyles.js" />
+    <Content Include="Assets\bower_components\jquery\src\css\var\isHiddenWithinTree.js" />
+    <Content Include="Assets\bower_components\jquery\src\css\var\rmargin.js" />
+    <Content Include="Assets\bower_components\jquery\src\css\var\rnumnonpx.js" />
+    <Content Include="Assets\bower_components\jquery\src\css\var\swap.js" />
+    <Content Include="Assets\bower_components\jquery\src\data.js" />
+    <Content Include="Assets\bower_components\jquery\src\data\Data.js" />
+    <Content Include="Assets\bower_components\jquery\src\data\var\acceptData.js" />
+    <Content Include="Assets\bower_components\jquery\src\data\var\dataPriv.js" />
+    <Content Include="Assets\bower_components\jquery\src\data\var\dataUser.js" />
+    <Content Include="Assets\bower_components\jquery\src\deferred.js" />
+    <Content Include="Assets\bower_components\jquery\src\deferred\exceptionHook.js" />
+    <Content Include="Assets\bower_components\jquery\src\deprecated.js" />
+    <Content Include="Assets\bower_components\jquery\src\dimensions.js" />
+    <Content Include="Assets\bower_components\jquery\src\effects.js" />
+    <Content Include="Assets\bower_components\jquery\src\effects\animatedSelector.js" />
+    <Content Include="Assets\bower_components\jquery\src\effects\Tween.js" />
+    <Content Include="Assets\bower_components\jquery\src\event.js" />
+    <Content Include="Assets\bower_components\jquery\src\event\ajax.js" />
+    <Content Include="Assets\bower_components\jquery\src\event\alias.js" />
+    <Content Include="Assets\bower_components\jquery\src\event\focusin.js" />
+    <Content Include="Assets\bower_components\jquery\src\event\support.js" />
+    <Content Include="Assets\bower_components\jquery\src\event\trigger.js" />
+    <Content Include="Assets\bower_components\jquery\src\exports\amd.js" />
+    <Content Include="Assets\bower_components\jquery\src\exports\global.js" />
+    <Content Include="Assets\bower_components\jquery\src\jquery.js" />
+    <Content Include="Assets\bower_components\jquery\src\manipulation.js" />
+    <Content Include="Assets\bower_components\jquery\src\manipulation\buildFragment.js" />
+    <Content Include="Assets\bower_components\jquery\src\manipulation\getAll.js" />
+    <Content Include="Assets\bower_components\jquery\src\manipulation\setGlobalEval.js" />
+    <Content Include="Assets\bower_components\jquery\src\manipulation\support.js" />
+    <Content Include="Assets\bower_components\jquery\src\manipulation\var\rcheckableType.js" />
+    <Content Include="Assets\bower_components\jquery\src\manipulation\var\rscriptType.js" />
+    <Content Include="Assets\bower_components\jquery\src\manipulation\var\rtagName.js" />
+    <Content Include="Assets\bower_components\jquery\src\manipulation\wrapMap.js" />
+    <Content Include="Assets\bower_components\jquery\src\manipulation\_evalUrl.js" />
+    <Content Include="Assets\bower_components\jquery\src\offset.js" />
+    <Content Include="Assets\bower_components\jquery\src\queue.js" />
+    <Content Include="Assets\bower_components\jquery\src\queue\delay.js" />
+    <Content Include="Assets\bower_components\jquery\src\selector-native.js" />
+    <Content Include="Assets\bower_components\jquery\src\selector-sizzle.js" />
+    <Content Include="Assets\bower_components\jquery\src\selector.js" />
+    <Content Include="Assets\bower_components\jquery\src\serialize.js" />
+    <Content Include="Assets\bower_components\jquery\src\traversing.js" />
+    <Content Include="Assets\bower_components\jquery\src\traversing\findFilter.js" />
+    <Content Include="Assets\bower_components\jquery\src\traversing\var\dir.js" />
+    <Content Include="Assets\bower_components\jquery\src\traversing\var\rneedsContext.js" />
+    <Content Include="Assets\bower_components\jquery\src\traversing\var\siblings.js" />
+    <Content Include="Assets\bower_components\jquery\src\var\arr.js" />
+    <Content Include="Assets\bower_components\jquery\src\var\class2type.js" />
+    <Content Include="Assets\bower_components\jquery\src\var\concat.js" />
+    <Content Include="Assets\bower_components\jquery\src\var\document.js" />
+    <Content Include="Assets\bower_components\jquery\src\var\documentElement.js" />
+    <Content Include="Assets\bower_components\jquery\src\var\fnToString.js" />
+    <Content Include="Assets\bower_components\jquery\src\var\getProto.js" />
+    <Content Include="Assets\bower_components\jquery\src\var\hasOwn.js" />
+    <Content Include="Assets\bower_components\jquery\src\var\indexOf.js" />
+    <Content Include="Assets\bower_components\jquery\src\var\ObjectFunctionString.js" />
+    <Content Include="Assets\bower_components\jquery\src\var\pnum.js" />
+    <Content Include="Assets\bower_components\jquery\src\var\push.js" />
+    <Content Include="Assets\bower_components\jquery\src\var\rcssNum.js" />
+    <Content Include="Assets\bower_components\jquery\src\var\rnothtmlwhite.js" />
+    <Content Include="Assets\bower_components\jquery\src\var\slice.js" />
+    <Content Include="Assets\bower_components\jquery\src\var\support.js" />
+    <Content Include="Assets\bower_components\jquery\src\var\toString.js" />
+    <Content Include="Assets\bower_components\jquery\src\wrap.js" />
+    <Content Include="Assets\css\style.css" />
+    <Content Include="Assets\js\enums.js" />
+    <Content Include="Content\bootstrap-datepicker.css" />
+    <Content Include="Content\bootstrap-datepicker.min.css" />
+    <Content Include="Content\bootstrap-datepicker.standalone.css" />
+    <Content Include="Content\bootstrap-datepicker.standalone.min.css" />
+    <Content Include="Content\bootstrap-datepicker3.css" />
+    <Content Include="Content\bootstrap-datepicker3.min.css" />
+    <Content Include="Content\bootstrap-datepicker3.standalone.css" />
+    <Content Include="Content\bootstrap-datepicker3.standalone.min.css" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\fullcalendar.css" />
+    <Content Include="Content\fullcalendar.min.css" />
+    <Content Include="Content\fullcalendar.print.css" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Content\themes\base\accordion.css" />
+    <Content Include="Content\themes\base\all.css" />
+    <Content Include="Content\themes\base\autocomplete.css" />
+    <Content Include="Content\themes\base\base.css" />
+    <Content Include="Content\themes\base\button.css" />
+    <Content Include="Content\themes\base\core.css" />
+    <Content Include="Content\themes\base\datepicker.css" />
+    <Content Include="Content\themes\base\dialog.css" />
+    <Content Include="Content\themes\base\draggable.css" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_444444_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_555555_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_777620_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_777777_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cc0000_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Content\themes\base\jquery-ui.css" />
+    <Content Include="Content\themes\base\jquery-ui.min.css" />
+    <Content Include="Content\themes\base\menu.css" />
+    <Content Include="Content\themes\base\progressbar.css" />
+    <Content Include="Content\themes\base\resizable.css" />
+    <Content Include="Content\themes\base\selectable.css" />
+    <Content Include="Content\themes\base\selectmenu.css" />
+    <Content Include="Content\themes\base\slider.css" />
+    <Content Include="Content\themes\base\sortable.css" />
+    <Content Include="Content\themes\base\spinner.css" />
+    <Content Include="Content\themes\base\tabs.css" />
+    <Content Include="Content\themes\base\theme.css" />
+    <Content Include="Content\themes\base\tooltip.css" />
+    <Content Include="img\hospital1.jpg" />
+    <Content Include="img\hospital2.jpg" />
+    <Content Include="img\img5.jpg" />
+    <Content Include="img\img6.jpg" />
+    <Content Include="img\logo.png" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Scripts\bootstrap-datepicker.js" />
+    <Content Include="Scripts\bootstrap-datepicker.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\fullcalendar.js" />
+    <Content Include="Scripts\fullcalendar.min.js" />
+    <Content Include="Scripts\FuncionesCliente.js" />
+    <Content Include="Scripts\gcal.js" />
+    <None Include="Scripts\jquery-1.11.3.intellisense.js" />
+    <Content Include="Scripts\jquery-1.11.3.js" />
+    <Content Include="Scripts\jquery-1.11.3.min.js" />
+    <Content Include="Scripts\jquery-ui-1.12.0.js" />
+    <Content Include="Scripts\jquery-ui-1.12.0.min.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\lang-all.js" />
+    <Content Include="Scripts\lang\ar-ma.js" />
+    <Content Include="Scripts\lang\ar-sa.js" />
+    <Content Include="Scripts\lang\ar-tn.js" />
+    <Content Include="Scripts\lang\ar.js" />
+    <Content Include="Scripts\lang\bg.js" />
+    <Content Include="Scripts\lang\ca.js" />
+    <Content Include="Scripts\lang\cs.js" />
+    <Content Include="Scripts\lang\da.js" />
+    <Content Include="Scripts\lang\de-at.js" />
+    <Content Include="Scripts\lang\de.js" />
+    <Content Include="Scripts\lang\el.js" />
+    <Content Include="Scripts\lang\en-au.js" />
+    <Content Include="Scripts\lang\en-ca.js" />
+    <Content Include="Scripts\lang\en-gb.js" />
+    <Content Include="Scripts\lang\es.js" />
+    <Content Include="Scripts\lang\fa.js" />
+    <Content Include="Scripts\lang\fi.js" />
+    <Content Include="Scripts\lang\fr-ca.js" />
+    <Content Include="Scripts\lang\fr.js" />
+    <Content Include="Scripts\lang\he.js" />
+    <Content Include="Scripts\lang\hi.js" />
+    <Content Include="Scripts\lang\hr.js" />
+    <Content Include="Scripts\lang\hu.js" />
+    <Content Include="Scripts\lang\id.js" />
+    <Content Include="Scripts\lang\is.js" />
+    <Content Include="Scripts\lang\it.js" />
+    <Content Include="Scripts\lang\ja.js" />
+    <Content Include="Scripts\lang\ko.js" />
+    <Content Include="Scripts\lang\lt.js" />
+    <Content Include="Scripts\lang\lv.js" />
+    <Content Include="Scripts\lang\nb.js" />
+    <Content Include="Scripts\lang\nl.js" />
+    <Content Include="Scripts\lang\pl.js" />
+    <Content Include="Scripts\lang\pt-br.js" />
+    <Content Include="Scripts\lang\pt.js" />
+    <Content Include="Scripts\lang\ro.js" />
+    <Content Include="Scripts\lang\ru.js" />
+    <Content Include="Scripts\lang\sk.js" />
+    <Content Include="Scripts\lang\sl.js" />
+    <Content Include="Scripts\lang\sr-cyrl.js" />
+    <Content Include="Scripts\lang\sr.js" />
+    <Content Include="Scripts\lang\sv.js" />
+    <Content Include="Scripts\lang\th.js" />
+    <Content Include="Scripts\lang\tr.js" />
+    <Content Include="Scripts\lang\uk.js" />
+    <Content Include="Scripts\lang\vi.js" />
+    <Content Include="Scripts\lang\zh-cn.js" />
+    <Content Include="Scripts\lang\zh-tw.js" />
+    <Content Include="Scripts\Listas.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.ar.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.az.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.bg.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.bs.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.ca.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.cs.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.cy.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.da.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.de.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.el.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.en-AU.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.en-GB.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.eo.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.es.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.et.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.eu.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.fa.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.fi.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.fo.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.fr-CH.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.fr.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.gl.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.he.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.hr.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.hu.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.hy.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.id.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.is.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.it-CH.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.it.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.ja.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.ka.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.kh.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.kk.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.ko.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.kr.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.lt.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.lv.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.me.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.mk.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.mn.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.ms.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.nb.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.nl-BE.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.nl.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.no.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.pl.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.pt-BR.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.pt.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.ro.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.rs-latin.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.rs.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.ru.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.sk.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.sl.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.sq.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.sr-latin.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.sr.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.sv.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.sw.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.th.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.tr.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.uk.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.vi.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.zh-CN.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.zh-TW.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\moment-with-locales.js" />
+    <Content Include="Scripts\moment-with-locales.min.js" />
+    <Content Include="Scripts\moment.js" />
+    <Content Include="Scripts\moment.min.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.matchmedia.addListener.js" />
+    <Content Include="Scripts\respond.matchmedia.addListener.min.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <None Include="Scripts\_references.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
+    <Content Include="Views\Account\ConfirmEmail.cshtml" />
+    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
+    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
+    <Content Include="Views\Account\ForgotPassword.cshtml" />
+    <Content Include="Views\Account\ForgotPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Account\ResetPassword.cshtml" />
+    <Content Include="Views\Account\ResetPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\SendCode.cshtml" />
+    <Content Include="Views\Account\VerifyCode.cshtml" />
+    <Content Include="Views\Manage\AddPhoneNumber.cshtml" />
+    <Content Include="Views\Manage\ChangePassword.cshtml" />
+    <Content Include="Views\Manage\Index.cshtml" />
+    <Content Include="Views\Manage\ManageLogins.cshtml" />
+    <Content Include="Views\Manage\SetPassword.cshtml" />
+    <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
+    <Content Include="Views\Shared\Lockout.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\UsersAdmin\Create.cshtml" />
+    <Content Include="Views\UsersAdmin\Index.cshtml" />
+    <Content Include="Views\Empresa\Index.cshtml" />
+    <Content Include="Views\Empresa\New.cshtml" />
+    <Content Include="Views\Campanias\_ListadoActividades.cshtml" />
+    <Content Include="Views\Campanias\Create.cshtml" />
+    <Content Include="Views\Campanias\Delete.cshtml" />
+    <Content Include="Views\Campanias\Edit.cshtml" />
+    <Content Include="Views\Campanias\Index.cshtml" />
+    <Content Include="Views\Actividades\Create.cshtml" />
+    <Content Include="Views\Actividades\Delete.cshtml" />
+    <Content Include="Views\Actividades\Details.cshtml" />
+    <Content Include="Views\Actividades\Edit.cshtml" />
+    <Content Include="Views\Actividades\Index.cshtml" />
+    <Content Include="Views\Account\ResponsibleLogin.cshtml" />
+    <Content Include="Scripts\jquery-1.11.3.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\Logs\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+    <Content Include="Assets\bower.json" />
+    <Content Include="Assets\bower_components\bootstrap\.bower.json" />
+    <Content Include="Assets\bower_components\bootstrap\bower.json" />
+    <Content Include="Assets\bower_components\bootstrap\CHANGELOG.md" />
+    <Content Include="Assets\bower_components\bootstrap\dist\css\bootstrap-theme.css.map" />
+    <Content Include="Assets\bower_components\bootstrap\dist\css\bootstrap-theme.min.css.map" />
+    <Content Include="Assets\bower_components\bootstrap\dist\css\bootstrap.css.map" />
+    <Content Include="Assets\bower_components\bootstrap\dist\css\bootstrap.min.css.map" />
+    <Content Include="Assets\bower_components\bootstrap\dist\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Assets\bower_components\bootstrap\dist\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Assets\bower_components\bootstrap\dist\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Assets\bower_components\bootstrap\dist\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Assets\bower_components\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Assets\bower_components\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Assets\bower_components\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Assets\bower_components\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Assets\bower_components\bootstrap\Gemfile" />
+    <Content Include="Assets\bower_components\bootstrap\Gemfile.lock" />
+    <Content Include="Assets\bower_components\bootstrap\grunt\.jshintrc" />
+    <Content Include="Assets\bower_components\bootstrap\grunt\configBridge.json" />
+    <Content Include="Assets\bower_components\bootstrap\grunt\npm-shrinkwrap.json" />
+    <Content Include="Assets\bower_components\bootstrap\grunt\sauce_browsers.yml" />
+    <Content Include="Assets\bower_components\bootstrap\ISSUE_TEMPLATE.md" />
+    <Content Include="Assets\bower_components\bootstrap\js\.jscsrc" />
+    <Content Include="Assets\bower_components\bootstrap\js\.jshintrc" />
+    <Content Include="Assets\bower_components\bootstrap\less\.csscomb.json" />
+    <Content Include="Assets\bower_components\bootstrap\less\.csslintrc" />
+    <Content Include="Assets\bower_components\bootstrap\less\alerts.less" />
+    <Content Include="Assets\bower_components\bootstrap\less\badges.less" />
+    <Content Include="Assets\bower_components\bootstrap\less\bootstrap.less" />
+    <Content Include="Assets\bower_components\bootstrap\less\breadcrumbs.less" />
+    <Content Include="Assets\bower_components\bootstrap\less\button-groups.less" />
+    <Content Include="Assets\bower_components\bootstrap\less\buttons.less" />
+    <Content Include="Assets\bower_components\bootstrap\less\carousel.less" />
+    <Content Include="Assets\bower_components\bootstrap\less\close.less" />
+    <Content Include="Assets\bower_components\bootstrap\less\code.less" />
+    <Content Include="Assets\bower_components\bootstrap\less\component-animations.less" />
+    <Content Include="Assets\bower_components\bootstrap\less\dropdowns.less" />
+    <Content Include="Assets\bower_components\bootstrap\less\forms.less" />
+    <Content Include="Assets\bower_components\bootstrap\less\glyphicons.less" />
+    <Content Include="Assets\bower_components\bootstrap\less\grid.less" />
+    <Content Include="Assets\bower_components\bootstrap\less\input-groups.less" />
+    <Content Include="Assets\bower_components\bootstrap\less\jumbotron.less" />
+    <Content Include="Assets\bower_components\bootstrap\less\labels.less" />
+    <Content Include="Assets\bower_components\bootstrap\less\list-group.less" />
+    <Content Include="Assets\bower_components\bootstrap\less\media.less" />
+    <Content Include="Assets\bower_components\bootstrap\less\mixins.less" />
+    <Content Include="Assets\bower_components\bootstrap\less\mixins\alerts.less" />
+    <Content Include="Assets\bower_components\bootstrap\less\mixins\background-variant.less" />
+    <Content Include="Assets\bower_components\bootstrap\less\mixins\border-radius.less" />
+    <Content Include="Assets\bower_components\bootstrap\less\mixins\buttons.less" />
+    <Content Include="Assets\bower_components\bootstrap\less\mixins\center-block.less" />
+    <Content Include="Assets\bower_components\bootstrap\less\mixins\clearfix.less" />
+    <Content Include="Assets\bower_components\bootstrap\less\mixins\forms.less" />
+    <Content Include="Assets\bower_components\bootstrap\less\mixins\gradients.less" />
+    <Content Include="Assets\bower_components\bootstrap\less\mixins\grid-framework.less" />
+    <Content Include="Assets\bower_components\bootstrap\less\mixins\grid.less" />
+    <Content Include="Assets\bower_components\bootstrap\less\mixins\hide-text.less" />
+    <Content Include="Assets\bower_components\bootstrap\less\mixins\image.less" />
+    <Content Include="Assets\bower_components\bootstrap\less\mixins\labels.less" />
+    <Content Include="Assets\bower_components\bootstrap\less\mixins\list-group.less" />
+    <Content Include="Assets\bower_components\bootstrap\less\mixins\nav-divider.less" />
+    <Content Include="Assets\bower_components\bootstrap\less\mixins\nav-vertical-align.less" />
+    <Content Include="Assets\bower_components\bootstrap\less\mixins\opacity.less" />
+    <Content Include="Assets\bower_components\bootstrap\less\mixins\pagination.less" />
+    <Content Include="Assets\bower_components\bootstrap\less\mixins\panels.less" />
+    <Content Include="Assets\bower_components\bootstrap\less\mixins\progress-bar.less" />
+    <Content Include="Assets\bower_components\bootstrap\less\mixins\reset-filter.less" />
+    <Content Include="Assets\bower_components\bootstrap\less\mixins\reset-text.less" />
+    <Content Include="Assets\bower_components\bootstrap\less\mixins\resize.less" />
+    <Content Include="Assets\bower_components\bootstrap\less\mixins\responsive-visibility.less" />
+    <Content Include="Assets\bower_components\bootstrap\less\mixins\size.less" />
+    <Content Include="Assets\bower_components\bootstrap\less\mixins\tab-focus.less" />
+    <Content Include="Assets\bower_components\bootstrap\less\mixins\table-row.less" />
+    <Content Include="Assets\bower_components\bootstrap\less\mixins\text-emphasis.less" />
+    <Content Include="Assets\bower_components\bootstrap\less\mixins\text-overflow.less" />
+    <Content Include="Assets\bower_components\bootstrap\less\mixins\vendor-prefixes.less" />
+    <Content Include="Assets\bower_components\bootstrap\less\modals.less" />
+    <Content Include="Assets\bower_components\bootstrap\less\navbar.less" />
+    <Content Include="Assets\bower_components\bootstrap\less\navs.less" />
+    <Content Include="Assets\bower_components\bootstrap\less\normalize.less" />
+    <Content Include="Assets\bower_components\bootstrap\less\pager.less" />
+    <Content Include="Assets\bower_components\bootstrap\less\pagination.less" />
+    <Content Include="Assets\bower_components\bootstrap\less\panels.less" />
+    <Content Include="Assets\bower_components\bootstrap\less\popovers.less" />
+    <Content Include="Assets\bower_components\bootstrap\less\print.less" />
+    <Content Include="Assets\bower_components\bootstrap\less\progress-bars.less" />
+    <Content Include="Assets\bower_components\bootstrap\less\responsive-embed.less" />
+    <Content Include="Assets\bower_components\bootstrap\less\responsive-utilities.less" />
+    <Content Include="Assets\bower_components\bootstrap\less\scaffolding.less" />
+    <Content Include="Assets\bower_components\bootstrap\less\tables.less" />
+    <Content Include="Assets\bower_components\bootstrap\less\theme.less" />
+    <Content Include="Assets\bower_components\bootstrap\less\thumbnails.less" />
+    <Content Include="Assets\bower_components\bootstrap\less\tooltip.less" />
+    <Content Include="Assets\bower_components\bootstrap\less\type.less" />
+    <Content Include="Assets\bower_components\bootstrap\less\utilities.less" />
+    <Content Include="Assets\bower_components\bootstrap\less\variables.less" />
+    <Content Include="Assets\bower_components\bootstrap\less\wells.less" />
+    <Content Include="Assets\bower_components\bootstrap\LICENSE" />
+    <Content Include="Assets\bower_components\bootstrap\nuget\bootstrap.less.nuspec" />
+    <Content Include="Assets\bower_components\bootstrap\nuget\bootstrap.nuspec" />
+    <Content Include="Assets\bower_components\bootstrap\nuget\MyGet.ps1" />
+    <Content Include="Assets\bower_components\bootstrap\package.json" />
+    <Content Include="Assets\bower_components\bootstrap\README.md" />
+    <Content Include="Assets\bower_components\jquery\.bower.json" />
+    <Content Include="Assets\bower_components\jquery\bower.json" />
+    <Content Include="Assets\bower_components\jquery\dist\jquery.min.map" />
+    <Content Include="Assets\bower_components\jquery\dist\jquery.slim.min.map" />
+    <Content Include="Assets\bower_components\jquery\external\sizzle\dist\sizzle.min.map" />
+    <Content Include="Assets\bower_components\jquery\README.md" />
+    <Content Include="Assets\bower_components\jquery\src\.eslintrc.json" />
+    <Content Include="Assets\bower_components\font-awesome\.bower.json" />
+    <Content Include="Assets\bower_components\font-awesome\.gitignore" />
+    <Content Include="Assets\bower_components\font-awesome\.npmignore" />
+    <Content Include="Assets\bower_components\font-awesome\bower.json" />
+    <Content Include="Assets\bower_components\font-awesome\css\font-awesome.css.map" />
+    <Content Include="Assets\bower_components\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="Assets\bower_components\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Assets\bower_components\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="Assets\bower_components\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Assets\bower_components\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="Assets\bower_components\font-awesome\less\animated.less" />
+    <Content Include="Assets\bower_components\font-awesome\less\bordered-pulled.less" />
+    <Content Include="Assets\bower_components\font-awesome\less\core.less" />
+    <Content Include="Assets\bower_components\font-awesome\less\fixed-width.less" />
+    <Content Include="Assets\bower_components\font-awesome\less\font-awesome.less" />
+    <Content Include="Assets\bower_components\font-awesome\less\icons.less" />
+    <Content Include="Assets\bower_components\font-awesome\less\larger.less" />
+    <Content Include="Assets\bower_components\font-awesome\less\list.less" />
+    <Content Include="Assets\bower_components\font-awesome\less\mixins.less" />
+    <Content Include="Assets\bower_components\font-awesome\less\path.less" />
+    <Content Include="Assets\bower_components\font-awesome\less\rotated-flipped.less" />
+    <Content Include="Assets\bower_components\font-awesome\less\screen-reader.less" />
+    <Content Include="Assets\bower_components\font-awesome\less\stacked.less" />
+    <Content Include="Assets\bower_components\font-awesome\less\variables.less" />
+    <Content Include="Assets\bower_components\font-awesome\scss\font-awesome.scss" />
+    <Content Include="Assets\bower_components\font-awesome\scss\_animated.scss" />
+    <Content Include="Assets\bower_components\font-awesome\scss\_bordered-pulled.scss" />
+    <Content Include="Assets\bower_components\font-awesome\scss\_core.scss" />
+    <Content Include="Assets\bower_components\font-awesome\scss\_fixed-width.scss" />
+    <Content Include="Assets\bower_components\font-awesome\scss\_icons.scss" />
+    <Content Include="Assets\bower_components\font-awesome\scss\_larger.scss" />
+    <Content Include="Assets\bower_components\font-awesome\scss\_list.scss" />
+    <Content Include="Assets\bower_components\font-awesome\scss\_mixins.scss" />
+    <Content Include="Assets\bower_components\font-awesome\scss\_path.scss" />
+    <Content Include="Assets\bower_components\font-awesome\scss\_rotated-flipped.scss" />
+    <Content Include="Assets\bower_components\font-awesome\scss\_screen-reader.scss" />
+    <Content Include="Assets\bower_components\font-awesome\scss\_stacked.scss" />
+    <Content Include="Assets\bower_components\font-awesome\scss\_variables.scss" />
+    <Content Include="NLog.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Config\app.connections.config" />
+    <Content Include="Config\app.parameters.config" />
+    <Content Include="Content\bootstrap-datepicker.css.map" />
+    <Content Include="Content\bootstrap-datepicker.min.css.map" />
+    <Content Include="Content\bootstrap-datepicker.standalone.css.map" />
+    <Content Include="Content\bootstrap-datepicker.standalone.min.css.map" />
+    <Content Include="Content\bootstrap-datepicker3.css.map" />
+    <Content Include="Content\bootstrap-datepicker3.min.css.map" />
+    <Content Include="Content\bootstrap-datepicker3.standalone.css.map" />
+    <Content Include="Content\bootstrap-datepicker3.standalone.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <None Include="NLog.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Project_Readme.html" />
+    <Content Include="Views\Example\Index.cshtml" />
+    <Content Include="Views\Example\Crud.cshtml" />
+    <Content Include="Views\Example\Courses.cshtml" />
+    <Content Include="Views\Example\CourseCrud.cshtml" />
+    <Content Include="Views\Users\Index.cshtml" />
+    <Content Include="Views\Users\Get.cshtml" />
+    <Content Include="Views\Roles\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\02-Service\Auth.Service\Servicios.Identity.csproj">
+      <Project>{5cf83629-6f04-4431-b38d-ddfe77ef58b7}</Project>
+      <Name>Servicios.Identity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\02-Service\Service\Servicios.csproj">
+      <Project>{28c36359-6bb2-4e51-822f-47ed2319ca5d}</Project>
+      <Name>Servicios</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\04-Common\Common\Common.csproj">
+      <Project>{fc851e96-7275-4d48-a340-9be06137a8ab}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\04-Common\Model\Modelo.csproj">
+      <Project>{0aebcabd-3b22-41ef-8e0f-8e10866f0eb3}</Project>
+      <Name>Modelo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\03-Persistence\Persistence.DatabaseContext\Persistence.DatabaseContext.csproj">
+      <Project>{227c2f50-0778-43c1-80ef-7eeef85005e9}</Project>
+      <Name>Persistence.DatabaseContext</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>59113</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:59113/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.2\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.2\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>
