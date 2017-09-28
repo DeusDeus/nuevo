@@ -8,88 +8,86 @@
     @Scripts.Render("~/bundles/modernizr") 
 </head>
 <body>
-    <nav class="menu menu--sebastian navbar navbar-inverse navbar-fixed-top">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <div style="width: 210px">
+    <div class="navbar navbar-inverse navbar-fixed-top">
+       <div class="container">
+           <div class="navbar-header">
+               <div style="width: 210px">
 
-                </div>
-                <style>
-                    img.logo {
-                        width: 215px;
-                    }
-                </style>
-                <picture>
+               </div>
+               <style>
+                   img.logo {
+                       width: 215px;
+                   }
+               </style>
+               <picture>
 
-                    <img class="logo" src="~/img/logo.png">
+                   <img class="logo" src="~/img/logo.png">
 
-                </picture>
-            </div>
-            <ul class="nav navbar-nav menu__list" id="m_nav_list">
+               </picture>
+           </div>
 
-                <li class="dropdown">
+            <div class="navbar-collapse collapse">
+              
+                <ul class="nav navbar-nav menu__list" id="m_nav_list">
 
-                    <a class="menu__link dropdown-toggle" data-toggle="dropdown" href="#">Admision <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        @if (User.IsInRole("AdminClientes") || User.IsInRole("Admin"))
-                        {
-                            <li class="nav navbar-nav"> @Html.ActionLink("pacientes", "Index", "pacientes")</li>
+                    <li class="dropdown">
+
+                        <a class="menu__link dropdown-toggle" data-toggle="dropdown" href="#">Admision <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            @if (User.IsInRole("AdminClientes") || User.IsInRole("Admin"))
+                            {
+                                <li class="nav navbar-nav"> @Html.ActionLink("pacientes", "Index", "pacientes")</li>
                                 <li>@Html.ActionLink("Admision", "Index", "Admision")</li>
-                        }
-                    </ul>
+                            }
+                        </ul>
 
-                </li>
+                    </li>
 
-                <li class="dropdown">
-                    <a class="menu__link dropdown-toggle" data-toggle="dropdown" href="#">Administracion de perfiles medicos <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        @if (User.IsInRole("Adminperfiles"))
-                        {
-                            <li> @Html.ActionLink("examenes", "Index", "examenes")</li>
+                    <li class="dropdown">
+                        <a class="menu__link dropdown-toggle" data-toggle="dropdown" href="#">Administracion de perfiles medicos <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            @if (User.IsInRole("Adminperfiles"))
+                            {
+                                <li> @Html.ActionLink("examenes", "Index", "examenes")</li>
                                 <li>@Html.ActionLink("empresas", "Index", "empresas")</li>
                                 <li>@Html.ActionLink("medicos", "Index", "medicos")</li>
                                 <li>@Html.ActionLink("Campanias", "Index", "Campanias")</li>
                                 <li>@Html.ActionLink("perfils", "Index", "perfils")</li>
-                        }
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a class="menu__link dropdown-toggle" data-toggle="dropdown" href="#">Administracion del sistemas <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li class="nav navbar-nav"> @Html.ActionLink("AspNetRoles", "Index", "AspNetRoles")</li>
-                        <li>@Html.ActionLink("UsersAdmin", "Index", "UsersAdmin")</li>
-                        <li>@Html.ActionLink("History", "Index", "History")</li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a class="menu__link dropdown-toggle" data-toggle="dropdown" href="#">Tablas Maestro<span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li class="nav navbar-nav"> @Html.ActionLink("tipo_examen_ocupacional", "Index", "tipo_examen_ocupacional")</li>
-                        <li>@Html.ActionLink("especialidads", "Index", "especialidads")</li>
-                    </ul>
-                </li>
-                }
-            </ul>
-
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Example", "Index", "Example")</li>
-                    <li>@Html.ActionLink("Users", "Index", "Users")</li>
-                    <li>@Html.ActionLink("Roles", "Index", "Roles")</li>
+                            }
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="menu__link dropdown-toggle" data-toggle="dropdown" href="#">Administracion del sistemas <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li class="nav navbar-nav"> @Html.ActionLink("AspNetRoles", "Index", "AspNetRoles")</li>
+                            <li>@Html.ActionLink("UsersAdmin", "Index", "UsersAdmin")</li>
+                            <li>@Html.ActionLink("History", "Index", "History")</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="menu__link dropdown-toggle" data-toggle="dropdown" href="#">Tablas Maestro<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li class="nav navbar-nav"> @Html.ActionLink("tipo_examen_ocupacional", "Index", "tipo_examen_ocupacional")</li>
+                            <li>@Html.ActionLink("especialidads", "Index", "especialidads")</li>
+                        </ul>
+                    </li>
+                    }
                 </ul>
+
+
                 @Html.Partial("_LoginPartial")
             </div>
         </div>
-        </div>
-        <div class="container body-content">
-            @RenderBody()
-            <hr />
-            <footer></footer>
-        </div>
-        @Scripts.Render("~/bundles/jquery")
-        @Scripts.Render("~/bundles/bootstrap")
-        @RenderSection("scripts", required: false)
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer></footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
 </body>
 
 </html>

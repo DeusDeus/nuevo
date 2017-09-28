@@ -1,0 +1,105 @@
+﻿@model IEnumerable<Paciente>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.apellido)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.num_doc_identidad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tipo_doc_identidad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.direccion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.telefono)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.celular)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lugar_nacimiento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fecha_nacimiento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.grado_instruccion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ocupacion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.estado_ciivil)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Area_de_trabajo)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.apellido)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.num_doc_identidad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tipo_doc_identidad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.direccion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.telefono)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.celular)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lugar_nacimiento)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fecha_nacimiento)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.grado_instruccion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ocupacion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.estado_ciivil)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Area_de_trabajo)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.idpersona }) |
+            @Html.ActionLink("Details", "Details", new { id=item.idpersona }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.idpersona })
+        </td>
+    </tr>
+}
+
+</table>

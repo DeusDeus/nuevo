@@ -42,7 +42,7 @@ namespace Service.Config
             container.Register<IServicioExamenes, ServicioExamenes>();
             container.Register<IServicioEspecialidadMedicas, ServicioEspecialidadMedicas>();
             container.Register<IServicioCampanias, ServicioCampanias>();
-            container.Register<IServicioAtencionAdmisions, ServicioAtencionAdmisions>();
+            container.Register<IServicioAtencionAdmision, ServicioAtencionAdmisions>();
             container.Register<IServicioActividades, ServicioActividades>();
             container.Register<IServicioEmpresas, ServicioEmpresas>();
             container.Register<IStudentService, StudentService>();

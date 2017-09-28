@@ -8,17 +8,21 @@ namespace PoliclinicoWeb.App_Start
 {
     public class BundleConfig
     {
-        // For more information on bundling, visit http://go.microsoft.com/fwlink/?LinkId=301862
+        // Para obtener más información sobre las uniones, visite http://go.microsoft.com/fwlink/?LinkId=301862
         public static void RegisterBundles(BundleCollection bundles)
         {
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
-                        "~/Scripts/jquery-{version}.js"));
+                        "~/Scripts/jquery-{version}.js",
+                        "~/Scripts/jquery.unobtrusive-ajax.min.js",
+                        "~/Scripts/bootstrap-datepicker.js",
+                        "~/Scripts/locales/bootstrap-datepicker.es.min.js",
+                        "~/Scripts/jquery-ui-1.12.0.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
                         "~/Scripts/jquery.validate*"));
 
-            // Use the development version of Modernizr to develop with and learn from. Then, when you're
-            // ready for production, use the build tool at http://modernizr.com to pick only the tests you need.
+            // Utilice la versión de desarrollo de Modernizr para desarrollar y obtener información. De este modo, estará
+            // preparado para la producción y podrá utilizar la herramienta de compilación disponible en http://modernizr.com para seleccionar solo las pruebas que necesite.
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
                         "~/Scripts/modernizr-*"));
 
@@ -28,7 +32,10 @@ namespace PoliclinicoWeb.App_Start
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
-                      "~/Content/site.css"));
+                      "~/Content/site.css",
+                      "~/Content/bootstrap-datepicker.css",
+                      "~/Content/themes/base/*.css",
+                      "~/Content/fullcalendar.css"));
         }
     }
 }

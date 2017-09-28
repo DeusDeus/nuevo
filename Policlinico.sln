@@ -31,7 +31,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modelo", "04-Common\Model\M
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Policlinico.Web", "web\Policlinico.Web.csproj", "{BB0D2AD4-4DEC-4A20-A886-361CF3CDF591}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "policlinico  con migracion", "..\..\..\Documents\Visual Studio 2015\Projects\policlinico  con migracion --con roles\ho\policlinico  con migracion\policlinico  con migracion.csproj", "{A73DAAF2-EAB7-4C17-8E42-4FFA8BA247F1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "policlinico  con migracion", "..\..\policlinico  con migracion --con roles\ho\policlinico  con migracion\policlinico  con migracion.csproj", "{A73DAAF2-EAB7-4C17-8E42-4FFA8BA247F1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

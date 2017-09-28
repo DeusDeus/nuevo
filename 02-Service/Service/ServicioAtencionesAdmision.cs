@@ -11,7 +11,7 @@ using System.Linq;
 
 namespace Service
 {
-    public interface IServicioAtencionAdmisions
+    public interface IServicioAtencionAdmision
     {
         IEnumerable<AtencionAdmision> GetAll();
         AtencionAdmision Get(int id);
@@ -20,7 +20,7 @@ namespace Service
 
 
     }
-    public class ServicioAtencionAdmisions : IServicioAtencionAdmisions
+    public class ServicioAtencionAdmisions : IServicioAtencionAdmision
     {
         private static ILogger logger = LogManager.GetCurrentClassLogger();
         private readonly IDbContextScopeFactory _dbContextScopeFactory;

@@ -22,7 +22,7 @@ namespace Model.Dtos
 
         public string NombreTipo { get; set; }
 
-        public string Telefonos { get; set; }
+        public string Telefono { get; set; }
 
         public string Emails { get; set; }
 

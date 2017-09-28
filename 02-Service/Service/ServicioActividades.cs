@@ -12,7 +12,6 @@ using System.Web.Mvc;
 
 namespace Service
 {
-
     /// <summary>
     /// Logica para las activiades
     /// </summary>
@@ -21,10 +20,9 @@ namespace Service
     {
         IEnumerable<Actividad> GetAll();
         Actividad Get(int id);
-        ComplementoDeRespuesta InsertOrUpdate(Actividad model);
+        ComplementoDeRespuesta create(ActividadDto model);
         ComplementoDeRespuesta Delete(int id);
     }
-
     public class ServicioActividades : IServicioActividades
     {
         private static ILogger logger = LogManager.GetCurrentClassLogger();
@@ -32,7 +30,6 @@ namespace Service
         private readonly IRepository<Actividad> _actividadRepository;
         private readonly IRepository<ApplicationUser> _applicationUser;
         private readonly IRepository<ApplicationRole> _applicationRole;
-
         public ServicioActividades(
             IDbContextScopeFactory dbContextScopeFactory,
             IRepository<Actividad> actividadRepository,
@@ -46,8 +43,6 @@ namespace Service
             _applicationRole = applicationRole;
         }
         //
-
-
         /// <summary>
         /// Retorna todas las actividades
         /// </summary>
@@ -105,7 +100,6 @@ namespace Service
         }
 
         #endregion
-
         /// <summary>
         /// Retorna una actividad por su id
         /// </summary>
@@ -130,13 +124,12 @@ namespace Service
             return result;
         }
         #endregion
-
         /// <summary>
         /// Inserta  o actualiza la tabla de actividades
         /// </summary>
         /// <returns></returns>
-        #region Inserta o eliminar
-        public ComplementoDeRespuesta InsertOrUpdate(Actividad model)
+        #region Inserta
+        public ComplementoDeRespuesta create(ActividadDto model)
         {
             var rh = new ComplementoDeRespuesta();
 
@@ -144,15 +137,18 @@ namespace Service
             {
                 using (var ctx = _dbContextScopeFactory.Create())
                 {
-                    if (model.Id == 0)
-                    {
-                        _actividadRepository.Insert(model);
-                    }
-                    else
-                    {
-                        _actividadRepository.Update(model);
-                    }
+                     Actividad actividad = new Actividad();
 
+                    actividad.Id = model.IdActividad;
+                    actividad.FechaInicial = model.FechaInicial;
+                    actividad.FechaFinal = model.FechaInicial;
+                    actividad.FechaInicialPlan = model.FechaInicial;
+                    actividad.FechaFinalPlan = model.FechaInicial;
+                    actividad.EmpresaId = model.IdEmpresa;
+                    actividad.TipoExamenOcupacionalId = model.IdActividad;
+                    actividad.Descripcion = model.Descripcion;
+                    actividad.Estado = 0;
+                    _actividadRepository.Insert(actividad);
                     ctx.SaveChanges();
                     rh.SetRespuesta(true);
                 }
@@ -165,8 +161,6 @@ namespace Service
             return rh;
         }
         #endregion
-
-
         /// <summary>
         /// eliminacion logica de actividad por  id
         /// </summary>
