@@ -14,8 +14,8 @@ namespace Model.Dominio
 
         public DateTime FechaAtencion { get; set; }
          
-        public ECalificacionAtencion Calificacion { get; set; }
-        public EEstadoAtencion Estado { get; set; }
+        public ECalificacionAtencion Calificacion { get; set; }//calificacion del medico
+        public EEstadoAtencion Estado { get; set; }// entregado pendiente
         public string Local { get; set; }
         public int? PerfilId { get; set; }
         public Perfil Perfil { get; set; }
